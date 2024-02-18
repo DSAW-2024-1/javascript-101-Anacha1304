@@ -2,7 +2,7 @@
 function sum(a, b) {
   // Add your code here
   if (typeof a !== 'number' || typeof b !== 'number'){
-    console.log("No se aceptan valores diferentes a números");
+    console.log("Los datos de entrada no son adecuados");
 
   } else {
     return a + b; 
