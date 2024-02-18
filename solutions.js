@@ -15,24 +15,27 @@ function factorial(n) {
   if (n < 0 || typeof n !== 'number') {
     console.log("El valor debe ser positivo y debe introducirse un número, cualquier otro carácter no es válido");
   } else {
-
-    let mult = 0;
-    for (let i = 1; i <= n; i++){
+    let mult = 1;
+    for (let i = 2; i <= n; i++){
       mult *= i; 
-      console.log("El factorial de " + n + " es " + mult);
     } 
+    return mult;
   }
 }
 
 // Find the Largest Number
 function findLargest(arr) {
   // Add your code here
+  if (arr.length === 0){
+    console.log("No hay información en el arreglo")
+  }
+
   let a = arr[0];
-  for (let i = 1; i < arr.lenght; i++) {
+  for (let i = 1; i < arr.length; i++) {
     if (arr[i] > a){
       a = arr[i]
-  }
-  console.log("El número más grande del arrelo es " + a); 
+    }
+  return a; 
   }
 
 }
@@ -42,10 +45,9 @@ function countVowels(str) {
   // Add your code here
   let A = 0, E = 0, I = 0, O = 0, U = 0;
 
-  let frase = "Frase a investigar"; 
 
-  for (let i = 1; i < frase.length; i++){
-    let vocal = frase[i];
+  for (let i = 0; i < str.length; i++){
+    let vocal = str[i];
     
     switch (vocal) {
       case 'a': 
@@ -90,9 +92,9 @@ function isPrime(n) {
   for (let i = 2; i <= n /2; i++){
     if (n % 1 === 0) {
     return false;
+    } 
   }
   return true;
-  }
   
 }
 
