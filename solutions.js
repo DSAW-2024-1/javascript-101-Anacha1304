@@ -2,7 +2,7 @@
 function sum(a, b) {
   // Add your code here
   if (typeof a !== 'number' || typeof b !== 'number'){
-    return ("No se aceptan valores que no sean números")
+    console.log("No se aceptan valores diferentes a números");
 
   } else {
     return a + b; 
@@ -13,13 +13,14 @@ function sum(a, b) {
 function factorial(n) {
   // Add your code here
   if (n < 0 || n !== 'number') {
-    return ("El valor debe ser positivo y debe introducirse un número, cualquier otro carácter no es válido")
+    console.log("El valor debe ser positivo y debe introducirse un número, cualquier otro carácter no es válido");
   } else {
+
     let mult = 1;
     for (let i = 2; i <= n; i++){
       mult *= i;
       let factorial = mult; 
-      return ("El factorial de " + n + " es " +factorial);
+      console.log("El factorial de " + n + " es " + factorial);
     } 
   }
 }
@@ -27,15 +28,18 @@ function factorial(n) {
 // Find the Largest Number
 function findLargest(arr) {
   // Add your code here
-  if (arr.lenght === null) {
-    return ("El arreglo no tiene información")
+  if (arr.lenght === 0) {
+    console.log("El arreglo no tiene información");
   } 
 
-  let a = arr[i];
-  for (let i = 0; i < arr.lenght; i++) {
-    a > arr[i]
+  let a = arr[0];
+  for (let i = 1; i < arr.lenght; i++) {
+    if (arr[i] > a){
+      a = arr[i]
   }
   return a; 
+  }
+
 }
 
 // Count Vowels in a String
@@ -77,18 +81,24 @@ function countVowels(str) {
   }
 
   let total = A + E + I + O + U;
-  return ("Hay un total de " + total + "vocales en la frase digitada");
+  console.log("Hay un total de " + total + "vocales en la frase digitada");
 
 }
 
 // Check if a Number is Prime
 function isPrime(n) {
   // Add your code here
+  if (n <= 1){
+    return false;
+  }
 
-  if (n % n === 0 && n % 1 === 0) {
+  for (let i = 2; i <= n /2; i++){
+    if (n % n === 0 && n % 1 === 0) {
     return true;
   }
   return false;
+  }
+  
 }
 
 module.exports = {
