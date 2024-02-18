@@ -12,15 +12,14 @@ function sum(a, b) {
 // Factorial of a Number
 function factorial(n) {
   // Add your code here
-  if (n < 0 || n !== 'number') {
+  if (n < 0 || typeof n !== 'number') {
     console.log("El valor debe ser positivo y debe introducirse un número, cualquier otro carácter no es válido");
   } else {
 
     let mult = 1;
     for (let i = 2; i <= n; i++){
-      mult *= i;
-      let factorial = mult; 
-      console.log("El factorial de " + n + " es " + factorial);
+      mult *= i; 
+      console.log("El factorial de " + n + " es " + mult);
     } 
   }
 }
@@ -29,7 +28,7 @@ function factorial(n) {
 function findLargest(arr) {
   // Add your code here
   if (arr.lenght === 0) {
-    console.log("El arreglo no tiene información");
+    return "El arreglo no tiene información";
   } 
 
   let a = arr[0];
@@ -81,7 +80,7 @@ function countVowels(str) {
   }
 
   let total = A + E + I + O + U;
-  console.log("Hay un total de " + total + "vocales en la frase digitada");
+  return "Hay un total de " + total + "vocales en la frase digitada";
 
 }
 
@@ -94,9 +93,9 @@ function isPrime(n) {
 
   for (let i = 2; i <= n /2; i++){
     if (n % n === 0 && n % 1 === 0) {
-    return true;
+    return false;
   }
-  return false;
+  return true;
   }
   
 }
