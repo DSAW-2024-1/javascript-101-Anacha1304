@@ -35,8 +35,8 @@ function findLargest(arr) {
     if (arr[i] > a){
       a = arr[i]
     }
-  return a; 
   }
+  return a; 
 
 }
 
@@ -90,12 +90,11 @@ function isPrime(n) {
   }
 
   for (let i = 2; i <= n /2; i++){
-    if (n % 1 === 0) {
+    if (n % i === 0) {
     return false;
     } 
   }
   return true;
-  
 }
 
 module.exports = {
