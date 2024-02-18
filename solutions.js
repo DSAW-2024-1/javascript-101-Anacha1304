@@ -16,8 +16,8 @@ function factorial(n) {
     console.log("El valor debe ser positivo y debe introducirse un número, cualquier otro carácter no es válido");
   } else {
 
-    let mult = 1;
-    for (let i = 2; i <= n; i++){
+    let mult = 0;
+    for (let i = 1; i <= n; i++){
       mult *= i; 
       console.log("El factorial de " + n + " es " + mult);
     } 
@@ -27,16 +27,12 @@ function factorial(n) {
 // Find the Largest Number
 function findLargest(arr) {
   // Add your code here
-  if (arr.lenght === 0) {
-    return "El arreglo no tiene información";
-  } 
-
   let a = arr[0];
   for (let i = 1; i < arr.lenght; i++) {
     if (arr[i] > a){
       a = arr[i]
   }
-  return a; 
+  console.log("El número más grande del arrelo es " + a); 
   }
 
 }
@@ -48,7 +44,7 @@ function countVowels(str) {
 
   let frase = "Frase a investigar"; 
 
-  for (let i = 0; i < frase.length; i++){
+  for (let i = 1; i < frase.length; i++){
     let vocal = frase[i];
     
     switch (vocal) {
@@ -80,7 +76,7 @@ function countVowels(str) {
   }
 
   let total = A + E + I + O + U;
-  return "Hay un total de " + total + "vocales en la frase digitada";
+  return total;
 
 }
 
@@ -92,7 +88,7 @@ function isPrime(n) {
   }
 
   for (let i = 2; i <= n /2; i++){
-    if (n % n === 0 && n % 1 === 0) {
+    if (n % 1 === 0) {
     return false;
   }
   return true;
